@@ -1,0 +1,84 @@
+@use "../global/variables" as var;
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav__link {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: var(--purple);
+  }
+}
+
+.nav__link--active,
+.nav__link--tel {
+  color: var(--purple);
+}
+
+.nav__link--active {
+  border-bottom: 2px solid var(--purple);
+}
+
+.nav__link--tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--purple-alt);
+
+    & .nav__link-icon {
+      fill: var(--purple-alt);
+    }
+  }
+
+  & .nav__link-icon {
+    fill: var(--purple);
+  }
+}
+
+@media (min-width: var.$tablet) {
+  .nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: var.$mobail-max) {
+  .nav--header {
+    position: absolute;
+    z-index: 3;
+    top: -1000px;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: var(--white);
+    transition: top 0.3s ease-in-out;
+    visibility: hidden;
+  }
+
+  .nav--header.active {
+    top: 0;
+    visibility: visible;
+  }
+
+  .nav__list--header {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: var.$laptop) {
+  .nav__list--footer {
+    column-gap: 80px;
+  }
+}

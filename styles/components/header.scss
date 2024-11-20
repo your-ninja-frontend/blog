@@ -1,0 +1,32 @@
+@use "../global/variables" as var;
+
+.header {
+  position: relative;
+  min-height: 50px;
+  background-color: var(--white);
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.header__logo {
+  flex-shrink: 0;
+  align-self: start;
+}
+
+@media (min-width: var.$tablet) {
+  .header {
+    min-height: 70px;
+  }
+
+  .header__wrapper {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

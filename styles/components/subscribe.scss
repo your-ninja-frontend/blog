@@ -1,0 +1,55 @@
+@use "../global/variables" as var;
+
+.subscribe {
+  padding: 40px 0 50px;
+  background-color: var(--white);
+}
+
+.subscribe__title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  max-width: 280px;
+  margin: auto;
+}
+
+@media (min-width: var.$tablet) {
+  .subscribe {
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: var.$laptop) and (max-width: var.$laptop-max) {
+  .subscribe {
+    padding-left: 148px;
+    padding-right: 148px;
+  }
+
+  .subscribe__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .subscribe__form {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .subscribe__form-input {
+    width: 380px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .subscribe__form {
+    max-width: 260px;
+  }
+}

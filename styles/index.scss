@@ -1,0 +1,22 @@
+@use "./fonts/fonts";
+@use "./global/global";
+
+@use "./utils/container";
+@use "./utils/visually-hidden";
+
+@use "./ui/button-menu";
+@use "./ui/button";
+@use "./ui/input";
+@use "./ui/pagination";
+
+@use "./components/home";
+@use "./components/header";
+@use "./components/logo";
+@use "./components/nav";
+@use "./components/banner";
+@use "./components/news-list";
+@use "./components/news-card";
+@use "./components/sidebar";
+@use "./components/popular-news";
+@use "./components/subscribe";
+@use "./components/footer";

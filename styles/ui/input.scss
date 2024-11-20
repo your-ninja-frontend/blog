@@ -1,0 +1,33 @@
+.input {
+  min-height: 49px;
+  padding: 13px 30px;
+  border-radius: 20px;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--text);
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: var(--main-bg);
+  }
+
+  &:focus {
+    outline: 1.5px solid var(--purple);
+    outline-offset: -1.5px;
+  }
+
+  &::placeholder {
+    color: var(--text-opacity);
+    transition: all 0.2s linear;
+  }
+
+  &:hover,
+  &:focus {
+    &::placeholder {
+      color: var(--text-opacity-60);
+    }
+  }
+}

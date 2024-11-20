@@ -1,0 +1,11 @@
+@use "../global/variables" as var;
+
+.sidebar__popular-news {
+  margin-bottom: 60px;
+}
+
+@media (min-width: var.$desktop) {
+  .sidebar__popular-news {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../global/variables" as var;
+
+.logo {
+  display: block;
+
+  &__img {
+    width: 40px;
+    height: 38px;
+    transition: all 0.2s linear;
+  }
+
+  @media (min-width: var.$tablet) {
+    &__img {
+      width: 50px;
+      height: 48px;
+    }
+  }
+}

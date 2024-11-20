@@ -1,0 +1,41 @@
+@use "../global/variables" as var;
+
+@mixin calc-without-scroll($prop, $value) {
+  #{$prop}: calc($value - var.$scroll);
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding-left: var.$paddingM;
+  @include calc-without-scroll(min-width, var.$mobail);
+  @include calc-without-scroll(max-width, var.$tablet);
+  @include calc-without-scroll(padding-right, var.$paddingM);
+}
+
+@media (min-width: var.$laptop) {
+  .container {
+    padding-left: var.$paddingL;
+    @include calc-without-scroll(max-width, var.$laptop);
+    @include calc-without-scroll(padding-right, var.$paddingL);
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .container {
+    padding-left: var.$paddingD;
+    @include calc-without-scroll(max-width, var.$desktop);
+    @include calc-without-scroll(padding-right, var.$paddingD);
+  }
+}
+
+@media (max-width: var.$mobail-max) {
+  .container--no-mobail {
+    padding: 0;
+  }
+
+  .container__mobail {
+    padding-left: var.$paddingM;
+    @include calc-without-scroll(padding-right, var.$paddingM);
+  }
+}

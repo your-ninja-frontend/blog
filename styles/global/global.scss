@@ -1,0 +1,51 @@
+:root {
+  --base-font: "Futura", "Arial", sans-serif;
+
+  --black: #000;
+  --white: #fff;
+  --white-opacity: rgba(255, 255, 255, 0.2);
+  --white-opacity-alt: rgba(255, 255, 255, 0.4);
+  --gray: #f5f5f5;
+  --text: #2f2222;
+  --text-opacity: rgba(47, 34, 34, 0.4);
+  --text-opacity-60: rgba(47, 34, 34, 0.6);
+  --main-bg: #f9f9f9;
+  --purple: #5d71dd;
+  --purple-alt: #6c7dd8;
+  --purple-opacity: rgba(93, 113, 221, 0.05);
+  --purple-opacity-alt: rgba(93, 113, 221, 0.15);
+  --purple-opacity-20: rgba(93, 113, 221, 0.2);
+  --card-shadow: 4px 8px 40px 0 rgba(8, 24, 111, 0.2);
+  --card-shadow-alt: 4px 8px 40px 0 rgba(8, 24, 111, 0.4);
+  --card-hover-layer: rgba(0, 0, 0, 0.15);
+  --popular-news-border: rgba(47, 34, 34, 0.1);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+  color: var(--text);
+  background-color: var(--main-bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

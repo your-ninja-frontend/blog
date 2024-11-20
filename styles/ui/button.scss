@@ -1,0 +1,81 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  padding: 13px;
+  border-radius: 20px;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--purple);
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: var(--purple-alt);
+  }
+
+  &:focus {
+    outline: 1.5px solid var(--text);
+    outline-offset: -1.5px;
+  }
+}
+
+.button--icon {
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.button--icon-refresh {
+  &::after {
+    background-image: url("../img/icon-refresh.svg");
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      animation-play-state: running;
+    }
+  }
+}
+
+.button--icon-send {
+  &::after {
+    background-image: url("../img/icon-send.svg");
+    transition: all 0.2s linear;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      transform: translateX(5px);
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

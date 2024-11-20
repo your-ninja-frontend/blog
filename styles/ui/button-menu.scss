@@ -1,0 +1,69 @@
+@use "../global/variables" as var;
+
+.button-menu {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--purple);
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    &::after,
+    &::before,
+    & .button-menu__line {
+      background-color: var(--purple-alt);
+    }
+  }
+}
+
+.button-menu.active {
+  &::after,
+  &::before {
+    position: absolute;
+  }
+
+  &::after {
+    transform: rotate(45deg) scale(0.8);
+  }
+  &::before {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+.button-menu__line {
+  gap: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--purple);
+  transition: all 0.3s ease-in;
+}
+
+.button-menu.active .button-menu__line {
+  opacity: 0;
+  transform: scale(0);
+}
+
+@media (min-width: var.$tablet) {
+  .button-menu {
+    display: none;
+  }
+}
