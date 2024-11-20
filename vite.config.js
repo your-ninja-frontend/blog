@@ -1,3 +1,4 @@
+import autoprefixer from "autoprefixer";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
@@ -17,6 +18,9 @@ export default defineConfig({
       scss: {
         api: "modern-compiler",
       },
+    },
+    postcss: {
+      plugins: [autoprefixer],
     },
   },
   plugins: [
