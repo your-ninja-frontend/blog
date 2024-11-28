@@ -8,5 +8,12 @@ window.addEventListener("DOMContentLoaded", () => {
   buttonMenu.addEventListener("click", () => {
     buttonMenu.classList.toggle("active");
     nav.classList.toggle("active");
+    if (nav.classList.contains("active")) {
+      nav.classList.toggle("visible");
+    } else {
+      setTimeout(() => {
+        nav.classList.toggle("visible");
+      }, 400);
+    }
   });
 });

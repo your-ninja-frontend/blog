@@ -63,12 +63,15 @@
     right: 0;
     display: block;
     background-color: var(--white);
-    transition: top 0.3s ease-in-out;
+    transition: top 0.4s ease-in-out;
     visibility: hidden;
   }
 
   .nav--header.active {
     top: 0;
+  }
+
+  .nav--header.visible {
     visibility: visible;
   }
 
